@@ -4,7 +4,12 @@
 .site-header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--b)}
 .nav{display:flex;justify-content:space-between;align-items:center;height:84px}.brand{font-weight:700}
 nav{display:flex;gap:36px}nav a{text-decoration:none;color:#666}nav a.active,nav a:hover{color:#111}
-.hero{min-height:92vh;display:flex;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:#666}
+.hero {
+    min-height: auto;
+    padding: 120px 0 100px;
+    display: flex;
+    align-items: flex-start;
+}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:#666}
 h1 {
     font-size: clamp(3.2rem, 6.4vw, 5.6rem);line-height:.92;max-width:1000px;margin:.2em 0}
 .lead{font-size:1.4rem;max-width:760px;color:#666}
