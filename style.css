@@ -1,0 +1,504 @@
+/* ==========================================================
+   WATERS INSTRUCTIONAL DESIGN
+   STYLE.CSS
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* ==========================================================
+   ROOT
+   ========================================================== */
+
+:root {
+
+    --background: #ffffff;
+
+    --surface: #fafafa;
+
+    --text: #222222;
+
+    --text-light: #666666;
+
+    --border: #e6e6e6;
+
+    --accent: #0a66c2;
+
+    --max-width: 1200px;
+
+    --transition: 0.25s ease;
+
+}
+
+
+/* ==========================================================
+   GLOBAL
+   ========================================================== */
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+.container {
+
+    width: min(92%, var(--max-width));
+
+    margin: 0 auto;
+
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(255,255,255,.96);
+
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.header-inner {
+
+    width: min(92%, var(--max-width));
+
+    margin: 0 auto;
+
+    height: 82px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    letter-spacing: -.02em;
+
+}
+
+nav {
+
+    display: flex;
+
+    gap: 42px;
+
+}
+
+nav a {
+
+    color: var(--text-light);
+
+    transition: var(--transition);
+
+}
+
+nav a:hover {
+
+    color: var(--text);
+
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+
+    min-height: 88vh;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.hero h1 {
+
+    margin: 0;
+
+    font-size: clamp(58px,7vw,92px);
+
+    line-height: .95;
+
+    letter-spacing: -.05em;
+
+}
+
+.hero p {
+
+    max-width: 720px;
+
+    margin: 36px 0;
+
+    color: var(--text-light);
+
+    font-size: 24px;
+
+}
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 18px 34px;
+
+    border: 1px solid var(--text);
+
+    transition: var(--transition);
+
+}
+
+.hero-button:hover {
+
+    background: var(--text);
+
+    color: white;
+
+}
+
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+
+section {
+
+    padding: 140px 0;
+
+    border-top: 1px solid var(--border);
+
+}
+
+.section-title {
+
+    margin-bottom: 40px;
+
+    font-size: 46px;
+
+    letter-spacing: -.03em;
+
+}
+
+.section-text {
+
+    max-width: 760px;
+
+    color: var(--text-light);
+
+}
+
+
+/* ==========================================================
+   EXPERTISE
+   ========================================================== */
+
+.three-column {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 40px;
+
+}
+
+.card {
+
+    padding: 42px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    transition: var(--transition);
+
+}
+
+.card:hover {
+
+    border-color: #999;
+
+    transform: translateY(-4px);
+
+}
+
+.card h3 {
+
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+    font-size: 26px;
+
+}
+
+
+/* ==========================================================
+   PROJECTS
+   ========================================================== */
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 40px;
+
+}
+
+.project {
+
+    padding: 48px;
+
+    border: 1px solid var(--border);
+
+    transition: var(--transition);
+
+}
+
+.project:hover {
+
+    border-color: var(--text);
+
+}
+
+.project h3 {
+
+    margin-top: 0;
+
+    font-size: 34px;
+
+}
+
+.project p {
+
+    color: var(--text-light);
+
+}
+
+
+/* ==========================================================
+   DEMO REEL
+   ========================================================== */
+
+.demo-video {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border: 1px solid var(--border);
+
+    background: #f2f2f2;
+
+}
+
+
+/* ==========================================================
+   CLIENTS
+   ========================================================== */
+
+.client-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 28px;
+
+}
+
+.client {
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================
+   CONTACT
+   ========================================================== */
+
+.contact {
+
+    text-align: center;
+
+}
+
+.contact h2 {
+
+    font-size: 54px;
+
+    margin-bottom: 20px;
+
+}
+
+.contact a {
+
+    font-size: 28px;
+
+    color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer {
+
+    padding: 70px 0;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================
+   REVEAL ANIMATION
+   ========================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition: .7s ease;
+
+}
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width:900px) {
+
+    nav {
+
+        display: none;
+
+    }
+
+    .three-column,
+
+    .project-grid,
+
+    .client-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 100px 0;
+
+    }
+
+    .hero h1 {
+
+        font-size: 58px;
+
+    }
+
+    .hero p {
+
+        font-size: 20px;
+
+    }
+
+    section {
+
+        padding: 90px 0;
+
+    }
+
+}
