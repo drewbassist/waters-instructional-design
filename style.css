@@ -138,12 +138,20 @@ section p{max-width:760px;}
 }
 
 .project-role{
-    margin:14px 0 22px;
-    font-size:.88rem;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:.12em;
     color:#777;
+    font-size:15px;
+    font-weight:600;
+    margin:0;
+    line-height:1.4;
+}
+
+.project-role::after{
+    content:"";
+    display:block;
+    width:72px;
+    height:1px;
+    background:#d9d9d9;
+    margin:16px 0 24px;
 }
 
 .project p{
@@ -221,7 +229,7 @@ section h2{font-size:2.2rem;}
 }
 
 .project-role{
-    margin:10px 0 18px;
+    margin:0;
 }
 
 .project p{
