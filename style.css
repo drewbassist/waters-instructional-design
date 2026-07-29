@@ -165,8 +165,20 @@ section:not(.hero) {
 }
 
 /* ===========================
-   DEMO
+   DEMO REEL
 =========================== */
+
+#demo {
+
+    padding-top: 25px;
+
+}
+
+#demo h2 {
+
+    margin: 0 0 18px;
+
+}
 
 .video {
 
@@ -174,7 +186,7 @@ section:not(.hero) {
 
     aspect-ratio: 16 / 9;
 
-    margin: 30px auto 0;
+    margin: 18px auto 0;
 
     border: 1px solid var(--b);
 
