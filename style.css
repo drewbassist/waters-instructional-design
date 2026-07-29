@@ -55,7 +55,6 @@ section p{max-width:760px;}
 
 #demo{padding-top:25px;}
 
-/* Four portal tiles */
 .selected-work-grid{
 display:grid;
 grid-template-columns:repeat(4,minmax(0,1fr));
@@ -84,20 +83,22 @@ border:1px solid var(--b);
 }
 
 .work-card h3{
-margin:0 0 6px;
+margin:0 0 8px;
 font-size:1rem;
 line-height:1.2;
+min-height:2.4em;
+display:flex;
+align-items:flex-start;
 }
 
 .work-card p{
 margin:0;
 font-size:.9rem;
 color:#666;
+min-height:2.2em;
 }
 
-.work-card a{
-display:none;
-}
+.work-card a{display:none;}
 
 footer{padding:60px 0;border-top:1px solid var(--b);text-align:center;color:#666;}
 .reveal{opacity:0;transform:translateY(28px);transition:.7s;}
@@ -121,6 +122,6 @@ gap:16px;
 }
 
 .work-card{padding:12px;}
-.work-card h3{font-size:.95rem;}
-.work-card p{font-size:.85rem;}
+.work-card h3{font-size:.95rem;min-height:2.4em;}
+.work-card p{font-size:.85rem;min-height:2.2em;}
 }
