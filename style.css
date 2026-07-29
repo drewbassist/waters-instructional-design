@@ -18,6 +18,7 @@ body {
     --w: 1200px;
     --hero-width: 1560px;
     --b: #e8e8e8;
+    --header-height: 84px;
 }
 
 /* ===========================
@@ -32,8 +33,6 @@ body {
 .narrow {
     max-width: 760px;
 }
-
-/* Hero gets its own wider container */
 
 .hero .container {
     width: min(96%, var(--hero-width));
@@ -57,7 +56,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 84px;
+    height: var(--header-height);
 }
 
 .brand {
@@ -86,8 +85,15 @@ nav a.active {
 =========================== */
 
 .hero {
-    min-height: auto;
-    padding: 70px 0 90px;
+
+    min-height: calc(100vh - var(--header-height));
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0;
+
 }
 
 .eyebrow {
@@ -99,95 +105,85 @@ nav a.active {
 }
 
 h1 {
-
     font-size: clamp(3.6rem, 6vw, 6rem);
-
     line-height: .92;
-
     letter-spacing: -.045em;
-
     margin: 0;
-
     max-width: 1450px;
-
     font-weight: 700;
-
 }
 
 .lead {
-
     margin-top: 36px;
-
     max-width: 760px;
-
     font-size: 1.45rem;
-
     color: #666;
-
 }
 
 .button {
-
     display: inline-block;
-
     margin-top: 44px;
-
     padding: 16px 34px;
-
     border: 1px solid #222;
-
     color: #222;
-
     text-decoration: none;
-
     transition: .25s;
-
 }
 
 .button:hover {
-
     background: #222;
-
     color: #fff;
-
 }
 
 /* ===========================
-   SECTIONS
+   PAGE SECTIONS
 =========================== */
 
-section {
+section:not(.hero) {
 
-    padding: 140px 0;
+    min-height: calc(100vh - var(--header-height));
+
+    display: flex;
+
+    align-items: flex-start;
+
+    padding: 70px 0;
+
+    scroll-margin-top: var(--header-height);
 
 }
 
 .feature {
-
     border-top: 1px solid var(--b);
-
     border-bottom: 1px solid var(--b);
-
 }
 
 .break {
-
     height: 1px;
-
     background: var(--b);
-
     margin: 40px 0;
-
 }
 
+/* ===========================
+   DEMO
+=========================== */
+
 .video {
+
     width: min(100%, 960px);
+
     aspect-ratio: 16 / 9;
-    margin: 50px auto 0;
+
+    margin: 30px auto 0;
+
     border: 1px solid var(--b);
+
     background: #f6f6f6;
+
     display: grid;
+
     place-items: center;
+
 }
 
 /* ===========================
@@ -195,21 +191,14 @@ section {
 =========================== */
 
 .contact {
-
     text-align: center;
-
 }
 
 footer {
-
     padding: 60px 0;
-
     border-top: 1px solid var(--b);
-
     text-align: center;
-
     color: #666;
-
 }
 
 /* ===========================
@@ -217,21 +206,14 @@ footer {
 =========================== */
 
 .reveal {
-
     opacity: 0;
-
     transform: translateY(28px);
-
     transition: .7s;
-
 }
 
 .reveal.visible {
-
     opacity: 1;
-
     transform: none;
-
 }
 
 /* ===========================
@@ -244,8 +226,10 @@ footer {
         display: none;
     }
 
-    .hero {
-        padding: 50px 0 70px;
+    .hero,
+    section:not(.hero) {
+        min-height: auto;
+        padding: 80px 0;
     }
 
     h1 {
@@ -255,10 +239,6 @@ footer {
 
     .lead {
         font-size: 1.2rem;
-    }
-
-    section {
-        padding: 90px 0;
     }
 
 }
