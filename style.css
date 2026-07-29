@@ -6,7 +6,7 @@
 nav{display:flex;gap:36px}nav a{text-decoration:none;color:#666}nav a.active,nav a:hover{color:#111}
 .hero {
     min-height: auto;
-    padding: 90px 0 100px;
+    padding: 90px 0 90px;
     display: flex;
     align-items: flex-start;
 }.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:#666}
