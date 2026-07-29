@@ -30,10 +30,6 @@ body {
     margin: 0 auto;
 }
 
-.narrow {
-    max-width: 760px;
-}
-
 .hero .container {
     width: min(96%, var(--hero-width));
     margin: 0 auto;
@@ -85,15 +81,10 @@ nav a.active {
 =========================== */
 
 .hero {
-
     min-height: calc(100vh - var(--header-height));
-
     display: flex;
-
     align-items: center;
-
     padding: 0;
-
 }
 
 .eyebrow {
@@ -140,17 +131,11 @@ h1 {
 =========================== */
 
 section:not(.hero) {
-
     min-height: calc(100vh - var(--header-height));
-
     display: flex;
-
     align-items: flex-start;
-
     padding: 70px 0;
-
     scroll-margin-top: var(--header-height);
-
 }
 
 .feature {
@@ -165,37 +150,46 @@ section:not(.hero) {
 }
 
 /* ===========================
+   TYPOGRAPHY
+=========================== */
+
+section h2 {
+    margin: 0 0 24px;
+    font-size: 3rem;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+section h3 {
+    margin: 0 0 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+section p {
+    max-width: 760px;
+}
+
+/* ===========================
    DEMO REEL
 =========================== */
 
 #demo {
-
     padding-top: 25px;
-
 }
 
 #demo h2 {
-
-    margin: 0 0 18px;
-
+    margin-bottom: 18px;
 }
 
 .video {
-
     width: min(100%, 960px);
-
     aspect-ratio: 16 / 9;
-
-    margin: 18px auto 0;
-
+    margin: 18px 0 0;
     border: 1px solid var(--b);
-
     background: #f6f6f6;
-
     display: grid;
-
     place-items: center;
-
 }
 
 /* ===========================
@@ -203,8 +197,12 @@ section:not(.hero) {
 =========================== */
 
 .contact {
-    text-align: center;
+    text-align: left;
 }
+
+/* ===========================
+   FOOTER
+=========================== */
 
 footer {
     padding: 60px 0;
@@ -251,6 +249,14 @@ footer {
 
     .lead {
         font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+
+    section h3 {
+        font-size: 1.5rem;
     }
 
 }
