@@ -11,192 +11,236 @@ body {
     font-family: Inter, Arial, sans-serif;
     color: #222;
     background: #fff;
-    line-height: 1.65;
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
 :root {
-    --w: 1200px;
-    --hero-width: 1560px;
+    --w: 1120px;
+    --hero-width: 1400px;
     --b: #e8e8e8;
     --header-height: 84px;
 }
-
-/* ===========================
-   GLOBAL LINKS
-=========================== */
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
-/* ===========================
-   LAYOUT
-=========================== */
-
-.container {
-    width: min(92%, var(--w));
-    margin: 0 auto;
+.container{
+    max-width: var(--w);
+    margin:0 auto;
+    padding:0 32px;
+    width:100%;
 }
 
-.hero .container {
-    width: min(92%, var(--hero-width));
-    margin: 0 auto;
+.hero .container{
+    max-width:var(--hero-width);
+    margin:0 auto;
+    padding:0 48px;
+    width:100%;
 }
 
-/* ===========================
-   HEADER
-=========================== */
-
-.site-header {
-    position: sticky;
-    top: 0;
-    background: rgba(255,255,255,.96);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--b);
-    z-index: 1000;
+.site-header{
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--b);
+    z-index:1000;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: var(--header-height);
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:var(--header-height);
 }
 
-.brand {
-    font-weight: 700;
-    font-size: 18px;
-    color: #222;
-    text-decoration: none;
-    transition: opacity .25s ease;
-    cursor: pointer;
+.brand{
+    font-weight:700;
+    font-size:18px;
+    transition:opacity .25s ease;
 }
 
-.brand:hover {
-    opacity: .65;
+.brand:hover{opacity:.65;}
+
+nav{
+    display:flex;
+    gap:36px;
 }
 
-nav {
-    display: flex;
-    gap: 36px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #666;
-    transition: .25s;
+nav a{
+    color:#666;
+    transition:.25s;
 }
 
 nav a:hover,
-nav a.active {
-    color: #111;
+nav a.active{
+    color:#111;
 }
 
-.hero {
-    min-height: calc(100vh - var(--header-height));
-    display: flex;
-    align-items: center;
-    padding: 0;
+.hero{
+    min-height:calc(100vh - var(--header-height));
+    display:flex;
+    align-items:center;
 }
 
-.eyebrow { margin:0 0 22px; text-transform:uppercase; letter-spacing:.12em; font-size:.82rem; color:#666; }
-
-h1 {
-    font-size: clamp(3.6rem, 6vw, 6rem);
-    line-height:.92;
-    letter-spacing:-.045em;
-    margin:0;
-    max-width:1450px;
-    font-weight:700;
-}
-
-.lead {
-    margin-top:36px;
-    max-width:760px;
-    font-size:1.45rem;
+.eyebrow{
+    margin:0 0 22px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.82rem;
     color:#666;
 }
 
-.button {
+h1{
+    font-size:clamp(3.6rem,6vw,6rem);
+    line-height:.92;
+    letter-spacing:-.045em;
+    margin:0;
+    max-width:1280px;
+}
+
+.lead{
+    margin-top:36px;
+    max-width:760px;
+    font-size:1.35rem;
+    color:#666;
+    line-height:1.75;
+}
+
+.button{
     display:inline-block;
     margin-top:44px;
     padding:16px 34px;
     border:1px solid #222;
-    color:#222;
-    text-decoration:none;
     transition:.25s;
 }
 
-.button:hover { background:#222; color:#fff; }
+.button:hover{
+    background:#222;
+    color:#fff;
+}
 
 section:not(.hero){
     min-height:calc(100vh - var(--header-height));
-    display:flex;
-    align-items:flex-start;
-    padding:70px 0;
+    padding:80px 0;
     scroll-margin-top:var(--header-height);
 }
 
-.feature{border-top:1px solid var(--b);border-bottom:1px solid var(--b);}
-.break{height:1px;background:var(--b);margin:40px 0;}
+.feature{
+    border-top:1px solid var(--b);
+    border-bottom:1px solid var(--b);
+}
 
-section h2{margin:0 0 24px;font-size:3rem;line-height:1.05;font-weight:700;}
-section h3{margin:0 0 20px;font-size:2rem;font-weight:700;}
-section p{max-width:760px;}
+.break{
+    height:1px;
+    background:var(--b);
+    margin:0;
+}
 
-#demo{padding-top:25px;}
-#demo h2{margin-bottom:18px;}
+section h2{
+    margin:0 0 28px;
+    font-size:3rem;
+}
+
+.project{
+    padding:52px 0;
+}
+
+.project h3{
+    margin:0 0 18px;
+    font-size:2rem;
+    line-height:1.2;
+}
+
+.project p{
+    max-width:760px;
+    margin:0;
+    font-size:1.08rem;
+    line-height:1.8;
+    color:#444;
+}
+
+.project-tags{
+    margin-top:22px;
+    font-size:.82rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#888;
+}
+
+section p{
+    max-width:760px;
+}
+
+#demo{
+    padding-top:25px;
+}
 
 .video{
-width:min(100%,960px);
-aspect-ratio:16/9;
-margin:18px 0 0;
-border:1px solid var(--b);
-background:#f6f6f6;
-display:grid;
-place-items:center;
-}
-
-.contact{text-align:left;}
-
-.contact a{
-    color:#222;
-    text-decoration:none;
-    transition:opacity .25s ease;
-}
-
-.contact a:hover{
-    opacity:.65;
+    width:min(100%,960px);
+    aspect-ratio:16/9;
+    margin-top:18px;
+    border:1px solid var(--b);
+    background:#f6f6f6;
+    display:grid;
+    place-items:center;
 }
 
 footer{
-padding:60px 0;
-border-top:1px solid var(--b);
-text-align:center;
-color:#666;
+    padding:60px 0;
+    border-top:1px solid var(--b);
+    text-align:center;
+    color:#666;
 }
 
 .reveal{
-opacity:0;
-transform:translateY(28px);
-transition:.7s;
+    opacity:0;
+    transform:translateY(28px);
+    transition:.7s;
 }
 
 .reveal.visible{
-opacity:1;
-transform:none;
+    opacity:1;
+    transform:none;
 }
 
 @media (max-width:900px){
-nav{display:none;}
+
+.container,
+.hero .container{
+    padding:0 24px;
+}
+
+nav{
+    display:none;
+}
+
 .hero,
 section:not(.hero){
-min-height:auto;
-padding:80px 0;
+    min-height:auto;
+    padding:72px 0;
 }
-h1{font-size:3.4rem;max-width:none;}
-.lead{font-size:1.2rem;}
-section h2{font-size:2.2rem;}
-section h3{font-size:1.5rem;}
+
+h1{
+    font-size:3.3rem;
+}
+
+.lead{
+    font-size:1.15rem;
+}
+
+section h2{
+    font-size:2.2rem;
+}
+
+.project{
+    padding:40px 0;
+}
+
+.project h3{
+    font-size:1.6rem;
+}
 }
