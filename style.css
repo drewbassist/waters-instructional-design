@@ -61,34 +61,37 @@ nav a:hover,
 nav a.active{color:#111;}
 
 /* adjusted hero */
+/* adjusted hero */
+
 .hero{
 display:flex;
 align-items:center;
-padding:48px 0 56px;
+padding:52px 0 60px;
 }
 
 .eyebrow{
-margin:0 0 18px;
+margin:0 0 20px;
 text-transform:uppercase;
-letter-spacing:.12em;
+letter-spacing:.14em;
 font-size:.82rem;
 color:#666;
 }
 
 .hero h1{
-max-width:1100px;
+max-width:1120px;
 font-size:clamp(44px,5.8vw,72px);
-line-height:.93;
+line-height:.98;
 font-weight:700;
-letter-spacing:-.04em;
+letter-spacing:-.035em;
 margin:0;
+text-wrap:balance;
 }
 
 .lead{
-margin:24px 0 32px;
-max-width:680px;
-font-size:1.18rem;
-line-height:1.6;
+margin:30px 0 36px;
+max-width:700px;
+font-size:1.2rem;
+line-height:1.65;
 color:#666;
 }
 
