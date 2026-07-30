@@ -125,3 +125,9 @@ gap:16px;
 .work-card h3{font-size:.95rem;min-height:2.4em;}
 .work-card p{font-size:.85rem;min-height:2.2em;}
 }
+
+#impact .lead{max-width:900px;margin-bottom:48px;}
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:40px 0 20px;}
+.impact-grid h3{margin:0 0 10px;font-size:1.3rem;}
+.impact-grid p{font-size:1rem;color:#555;}
+@media(max-width:900px){.impact-grid{grid-template-columns:1fr;}}
