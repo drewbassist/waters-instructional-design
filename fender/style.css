@@ -10,9 +10,7 @@
   --max:1180px;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
   font-family:Inter,Arial,sans-serif;
@@ -42,15 +40,19 @@ body{
   border-bottom:1px solid var(--line);
 }
 
-.case-header-inner{
-  max-width:var(--max);
-  margin:0 auto;
+.case-header .wrap{
   padding:22px 40px;
+}
 
+.case-nav{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:40px;
+  align-items:center;
+}
+
+.case-nav nav{
+  display:flex;
+  gap:36px;
 }
 
 .back-link{
@@ -58,13 +60,6 @@ body{
   color:#555;
   font-size:18px;
   white-space:nowrap;
-  flex-shrink:0;
-}
-
-.case-nav{
-  display:flex;
-  gap:36px;
-  margin-left:auto;
 }
 
 .case-nav a{
@@ -125,7 +120,7 @@ section{
 #challenge,
 #role,
 #process,
-#deliverables,
+#work,
 #results{
   scroll-margin-top:110px;
 }
@@ -194,8 +189,6 @@ li{
   margin-bottom:10px;
 }
 
-/* ================= FOOTER ================= */
-
 footer{
   border-top:1px solid var(--line);
   padding:50px 0;
@@ -216,11 +209,11 @@ footer{
     padding:0 24px;
   }
 
-  .case-header-inner{
+  .case-header .wrap{
     padding:18px 24px;
   }
 
-  .case-nav{
+  .case-nav nav{
     display:none;
   }
 
