@@ -114,5 +114,19 @@
   </div>
 </footer>
 
+
+<script>
+const sections=[...document.querySelectorAll('section[id]')];
+const links=[...document.querySelectorAll('.case-nav nav a')];
+const obs=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+ if(e.isIntersecting){
+ links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')=='#'+e.target.id));
+ }
+ });
+},{threshold:.45});
+sections.forEach(s=>obs.observe(s));
+</script>
+
 </body>
 </html>

@@ -234,3 +234,46 @@ footer{
     font-size:22px;
   }
 }
+
+
+/* ===== Third Pass Polish ===== */
+.case-header{backdrop-filter:blur(14px);background:rgba(255,255,255,.88);}
+.hero{padding:72px 0 56px!important;}
+.hero h1{font-size:clamp(3.8rem,6vw,5rem)!important;line-height:1.02;letter-spacing:-.04em;}
+.hero p{font-size:1.15rem;max-width:42rem;}
+section{padding:96px 0!important;}
+.case-image,.hero img,.mockup,img.feature{
+ border-radius:18px;
+ border:1px solid var(--line);
+ box-shadow:0 18px 40px rgba(0,0,0,.08);
+ transition:transform .35s ease, box-shadow .35s ease;
+}
+.case-image:hover,.hero img:hover,.mockup:hover,img.feature:hover{
+ transform:translateY(-4px) scale(1.01);
+ box-shadow:0 28px 56px rgba(0,0,0,.12);
+}
+.case-nav nav a{
+ position:relative;
+}
+.case-nav nav a::after{
+content:"";
+position:absolute;
+left:0;bottom:-8px;width:0;height:2px;
+background:#222;transition:width .25s;
+}
+.case-nav nav a:hover::after,
+.case-nav nav a.active::after{width:100%;}
+.metric-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:24px;
+margin-top:48px;
+}
+.metric{
+border:1px solid var(--line);
+border-radius:18px;
+padding:32px;
+text-align:center;
+background:#fff;
+}
+.metric strong{display:block;font-size:3rem;line-height:1;}
