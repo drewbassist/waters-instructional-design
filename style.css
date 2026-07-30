@@ -53,20 +53,22 @@ section p{max-width:760px;}
 .project-role::after{content:"";display:block;width:72px;height:1px;background:#d9d9d9;margin:16px 0 24px;}
 .project p{margin:0;max-width:760px;font-size:1.12rem;line-height:1.85;color:#444;}
 
-#demo{padding-top:25px;}
+#demo{
+    padding-top:25px;
+}
 
 .selected-work-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:28px;
-    align-items:start;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:20px;
 }
 
 .work-card{
-border:1px solid var(--b);
-background:#fff;
-padding:14px;
-transition:.25s ease;
+    border:1px solid var(--b);
+    background:#fff;
+    padding:14px;
+    transition:.25s ease;
+    min-width:0;
 }
 
 .work-card:hover{
