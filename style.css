@@ -48,7 +48,7 @@ nav a:hover,nav a.active{color:#111;}
 .hero h1{
     max-width:1250px;
     font-size:clamp(52px,6vw,82px);
-    line-height:.94;
+    line-height:1.02;
     font-weight:700;
     letter-spacing:-.04em;
 }
