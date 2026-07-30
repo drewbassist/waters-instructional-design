@@ -33,11 +33,17 @@ nav{display:flex;gap:36px;}
 nav a{color:#666;transition:.25s;}
 nav a:hover,nav a.active{color:#111;}
 
-.hero{min-height:calc(100vh - var(--header-height));display:flex;align-items:center;}
-.eyebrow{margin:0 0 22px;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;color:#666;}
-.hero h1{max-width:1100px;font-size:clamp(54px,7vw,92px);line-height:.95;font-weight:700;letter-spacing:-.04em;}
-.lead{margin-top:36px;margin-bottom:52px;max-width:760px;font-size:1.35rem;line-height:1.75;color:#666;}
-.button{display:inline-block;margin-top:44px;padding:16px 34px;border:1px solid #222;transition:.25s;}
+.hero{
+min-height:calc(100vh - var(--header-height));
+display:flex;
+align-items:flex-start;
+padding:70px 0 45px;
+}
+.eyebrow{margin:0 0 18px;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;color:#666;}
+.hero h1{margin:0;max-width:1100px;font-size:clamp(54px,7vw,92px);line-height:.95;font-weight:700;letter-spacing:-.04em;}
+.lead{margin-top:24px;margin-bottom:30px;max-width:760px;font-size:1.35rem;line-height:1.75;color:#666;}
+.hero-credentials{margin-bottom:30px;}
+.button{display:inline-block;margin-top:0;padding:16px 34px;border:1px solid #222;transition:.25s;}
 .button:hover{background:#222;color:#fff;}
 
 section:not(.hero){min-height:calc(100vh - var(--header-height));padding:80px 0;scroll-margin-top:var(--header-height);}
