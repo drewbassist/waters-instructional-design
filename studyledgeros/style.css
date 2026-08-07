@@ -204,7 +204,19 @@ p{
 .gallery{
   grid-template-columns:repeat(3,1fr);
 }
+/* ================= HERO VIDEO ================= */
 
+.hero-video{
+  width:100%;
+}
+
+.hero-video video{
+  width:100%;
+  display:block;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#000;
+}
 /* ================= FOOTER ================= */
 
 footer{
