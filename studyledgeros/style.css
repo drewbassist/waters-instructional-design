@@ -207,15 +207,17 @@ p{
 /* ================= HERO VIDEO ================= */
 
 .hero-video{
-  width:100%;
+    width:100%;
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+    background:#000;
 }
 
 .hero-video video{
-  width:100%;
-  display:block;
-  border:1px solid var(--border);
-  border-radius:12px;
-  background:#000;
+    display:block;
+    width:100%;
+    height:auto;
 }
 /* ================= FOOTER ================= */
 
