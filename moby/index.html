@@ -60,11 +60,10 @@ Designing and implementing a scalable digital media ecosystem that centralized d
 
 </div>
 
-<div class="placeholder">
-
-Replace with application screenshot or video
-
-</div>
+<button class="archive-preview" id="archivePreview" type="button" aria-label="Enlarge Moby Digital Archive system overview">
+<img src="moby-digital-archive-system-overview.png" alt="Moby Digital Archive system overview diagram">
+<span>Click to enlarge</span>
+</button>
 
 </div>
 
@@ -254,6 +253,38 @@ This project demonstrates systems thinking across digital preservation, informat
 </div>
 
 </footer>
+
+<div class="archive-lightbox" id="archiveLightbox" aria-hidden="true">
+<button class="archive-lightbox-close" id="archiveLightboxClose" type="button" aria-label="Close enlarged diagram">&times;</button>
+<img src="moby-digital-archive-system-overview.png" alt="Moby Digital Archive system overview diagram enlarged">
+</div>
+
+<script>
+const preview = document.getElementById('archivePreview');
+const lightbox = document.getElementById('archiveLightbox');
+const closeButton = document.getElementById('archiveLightboxClose');
+
+function openArchiveLightbox() {
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lightbox-open');
+}
+
+function closeArchiveLightbox() {
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lightbox-open');
+}
+
+preview.addEventListener('click', openArchiveLightbox);
+closeButton.addEventListener('click', closeArchiveLightbox);
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox) closeArchiveLightbox();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeArchiveLightbox();
+});
+</script>
 
 </body>
 </html>
