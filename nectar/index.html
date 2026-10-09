@@ -29,7 +29,10 @@
 <h2>Instructional Design for the U.S. Department of State</h2>
 <p>Designed instructor-led, virtual instructor-led, and self-paced learning experiences supporting government training initiatives. Produced multimedia assets and collaborated with subject matter experts to create engaging, measurable learning experiences.</p>
 </div>
-<div class="image-placeholder">Coming Soon</div>
+<button class="nectar-preview" id="nectarPreview" type="button" aria-label="Enlarge Global Embassy Security Training infographic">
+<img src="global-embassy-security-training.png" alt="Global Embassy Security Training workflow infographic">
+<span>Click to enlarge</span>
+</button>
 </div>
 </section>
 
@@ -95,5 +98,30 @@
 </div>
 </footer>
 
+<div class="nectar-lightbox" id="nectarLightbox" role="dialog" aria-modal="true" aria-label="Global Embassy Security Training infographic" aria-hidden="true">
+<div class="nectar-lightbox-controls">
+<button id="nectarZoom" type="button" aria-label="Zoom in on infographic">Zoom in</button>
+<button id="nectarClose" type="button" aria-label="Close infographic">&times;</button>
+</div>
+<div class="nectar-lightbox-scroller" id="nectarScroller">
+<img id="nectarFullImage" src="global-embassy-security-training.png" alt="Global Embassy Security Training infographic, full size">
+</div>
+</div>
+<script>
+(() => {
+ const preview=document.getElementById('nectarPreview');
+ const lightbox=document.getElementById('nectarLightbox');
+ const close=document.getElementById('nectarClose');
+ const zoom=document.getElementById('nectarZoom');
+ let previousFocus=null;
+ function open(){previousFocus=document.activeElement;lightbox.classList.add('is-open');lightbox.setAttribute('aria-hidden','false');document.body.classList.add('nectar-lightbox-open');close.focus();}
+ function shut(){lightbox.classList.remove('is-open','is-zoomed');lightbox.setAttribute('aria-hidden','true');document.body.classList.remove('nectar-lightbox-open');zoom.textContent='Zoom in';zoom.setAttribute('aria-label','Zoom in on infographic');if(previousFocus)previousFocus.focus();}
+ preview.addEventListener('click',open);
+ close.addEventListener('click',shut);
+ lightbox.addEventListener('click',e=>{if(e.target===lightbox)shut();});
+ zoom.addEventListener('click',()=>{const active=lightbox.classList.toggle('is-zoomed');zoom.textContent=active?'Fit to screen':'Zoom in';zoom.setAttribute('aria-label',active?'Fit infographic to screen':'Zoom in on infographic');});
+ document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('is-open'))return;if(e.key==='Escape')shut();if(e.key==='Tab'){const controls=[zoom,close];if(e.shiftKey&&document.activeElement===zoom){e.preventDefault();close.focus();}else if(!e.shiftKey&&document.activeElement===close){e.preventDefault();zoom.focus();}}});
+})();
+</script>
 </body>
 </html>
