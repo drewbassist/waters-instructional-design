@@ -204,21 +204,9 @@ p{
 .gallery{
   grid-template-columns:repeat(3,1fr);
 }
-/* ================= HERO VIDEO ================= */
-
-.hero-video{
-    width:100%;
-    border:1px solid var(--border);
-    border-radius:14px;
-    overflow:hidden;
-    background:#000;
-}
-
-.hero-video video{
-    display:block;
-    width:100%;
-    height:auto;
-}
+/* Hero infographic replaces video */
+.hero-infographic{width:100%;min-width:0}
+.hero-infographic .case-diagram{width:100%}
 /* ================= FOOTER ================= */
 
 footer{
