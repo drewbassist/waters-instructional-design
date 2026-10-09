@@ -40,3 +40,33 @@ body.lightbox-open{overflow:hidden}
 /* Remove forced blank bands; match Fender infographic preview. */
 .archive-preview{min-height:0!important;aspect-ratio:2/1;border:0;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
 .archive-preview img{width:100%;height:100%;object-fit:cover;background:transparent}
+
+
+/* Unified portfolio vertical rhythm, October 2026 */
+:root {
+  --space-label: 12px;
+  --space-heading: 16px;
+  --space-copy: 12px;
+  --space-block: 24px;
+  --space-section: 56px;
+}
+.hero { padding: 64px 0 56px !important; }
+.hero-grid { gap: 40px; }
+.eyebrow { margin: 0 0 var(--space-label) !important; }
+.hero h1 { margin: 0 0 var(--space-heading) !important; }
+.hero h2 { margin: 0 0 var(--space-block) !important; }
+.hero .lead, .hero-copy > p:last-child { margin-bottom: 0; }
+section:not(.hero) { padding: var(--space-section) 0 !important; }
+section:not(.hero) h2 { margin: 0 0 var(--space-heading) !important; }
+section:not(.hero) h3 { margin: 0 0 var(--space-label) !important; }
+section:not(.hero) p { margin-bottom: var(--space-copy); }
+section:not(.hero) p:last-child { margin-bottom: 0; }
+.two-column { gap: 36px; }
+.process-grid { gap: 16px; }
+.gallery { gap: 16px; }
+@media (max-width: 900px) {
+  .hero { padding: 48px 0 40px !important; }
+  .hero-grid { gap: 24px; }
+  section:not(.hero) { padding: 40px 0 !important; }
+  .two-column { gap: 24px; }
+}

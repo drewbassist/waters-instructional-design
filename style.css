@@ -184,3 +184,17 @@ gap:16px;
 .work-card h3{font-size:.95rem;min-height:2.4em;}
 .work-card p{font-size:.85rem;min-height:2.2em;}
 }
+
+/* Unified portfolio vertical rhythm, October 2026 */
+:root { --portfolio-section-gap: 56px; --portfolio-heading-gap: 16px; }
+section:not(.hero) { min-height: auto; padding: var(--portfolio-section-gap) 0; }
+section h2 { margin-bottom: var(--portfolio-heading-gap); }
+.feature > .container > .lead { margin-bottom: 32px; }
+.project { padding: 36px 0; }
+.project-role { margin-bottom: 14px; padding-bottom: 8px; }
+.project-role::after { margin: 10px 0 12px; }
+.project p { line-height: 1.65; }
+@media(max-width:700px) {
+  section:not(.hero) { padding: 40px 0; }
+  .project { padding: 28px 0; }
+}
