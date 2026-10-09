@@ -261,3 +261,7 @@ footer{
 .case-lightbox button{position:absolute;top:12px;border:1px solid #ffffff55;background:#17263a;color:#fff;padding:8px 13px;border-radius:8px;font:600 14px system-ui,sans-serif;cursor:pointer}
 .case-close{right:18px}.case-zoom{right:104px}
 @media(max-width:700px){.case-lightbox.is-zoomed img{transform:scale(2.3)}.case-diagram .case-hint{font-size:11px}}
+
+/* Match Fender hero infographic frame (2:1), preserving full artwork. */
+.case-diagram{aspect-ratio:2/1;border:0;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.case-diagram img{width:100%;height:100%;object-fit:contain}
