@@ -47,7 +47,10 @@
 
     </div>
 
-    <div class="image-placeholder">Coming Soon</div>
+    <button class="fender-preview" id="fenderPreview" type="button" aria-label="Enlarge Fender Play instructional workflow infographic">
+<img src="fender-play-instructional-workflow.png" alt="Fender Play instructional content development workflow infographic">
+<span>Click to enlarge</span>
+</button>
 
   </div>
 </section>
@@ -150,5 +153,30 @@
 
 </footer>
 
+<div class="fender-lightbox" id="fenderLightbox" role="dialog" aria-modal="true" aria-label="Fender Play instructional workflow infographic" aria-hidden="true">
+<div class="fender-lightbox-controls">
+<button id="fenderZoom" type="button" aria-label="Zoom in on infographic">Zoom in</button>
+<button id="fenderClose" type="button" aria-label="Close infographic">&times;</button>
+</div>
+<div class="fender-lightbox-scroller" id="fenderScroller">
+<img id="fenderFullImage" src="fender-play-instructional-workflow.png" alt="Fender Play instructional workflow infographic, full size">
+</div>
+</div>
+<script>
+(() => {
+ const preview=document.getElementById('fenderPreview');
+ const lightbox=document.getElementById('fenderLightbox');
+ const close=document.getElementById('fenderClose');
+ const zoom=document.getElementById('fenderZoom');
+ let previousFocus=null;
+ function open(){previousFocus=document.activeElement;lightbox.classList.add('is-open');lightbox.setAttribute('aria-hidden','false');document.body.classList.add('fender-lightbox-open');close.focus();}
+ function shut(){lightbox.classList.remove('is-open','is-zoomed');lightbox.setAttribute('aria-hidden','true');document.body.classList.remove('fender-lightbox-open');zoom.textContent='Zoom in';zoom.setAttribute('aria-label','Zoom in on infographic');if(previousFocus)previousFocus.focus();}
+ preview.addEventListener('click',open);
+ close.addEventListener('click',shut);
+ lightbox.addEventListener('click',e=>{if(e.target===lightbox)shut();});
+ zoom.addEventListener('click',()=>{const active=lightbox.classList.toggle('is-zoomed');zoom.textContent=active?'Fit to screen':'Zoom in';zoom.setAttribute('aria-label',active?'Fit infographic to screen':'Zoom in on infographic');});
+ document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('is-open'))return;if(e.key==='Escape')shut();if(e.key==='Tab'){const controls=[zoom,close];if(e.shiftKey&&document.activeElement===zoom){e.preventDefault();close.focus();}else if(!e.shiftKey&&document.activeElement===close){e.preventDefault();zoom.focus();}}});
+})();
+</script>
 </body>
 </html>
