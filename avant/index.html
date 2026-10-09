@@ -2,132 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avant | Case Study</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="case-study-layout.css">
 </head>
-<body>
-
-<header class="case-header">
-  <div class="wrap case-nav">
-    <a class="back-link" href="../index.html#demo">&larr; Back to Portfolio</a>
-
-    <nav>
-      <a href="#challenge">Challenge</a>
-      <a href="#role">Role</a>
-      <a href="#process">Process</a>
-      <a href="#deliverables">Deliverables</a>
-      <a href="#results">Results</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">CASE STUDY</p>
-      <h1>Avant</h1>
-      <h2>Enterprise Learning for Financial Technology</h2>
-      <p>
-        Designed enterprise learning experiences supporting global employee training,
-        onboarding, compliance, and professional development. Produced eLearning,
-        multimedia, and instructor resources while collaborating across product,
-        operations, and learning teams.
-      </p>
-    </div>
-
-    <button class="case-diagram" data-case-preview type="button" aria-label="Enlarge Avant Global Training Program infographic"><img src="avant-workflow.png" alt="Avant Global Training Program end-to-end workflow infographic"><span class="case-hint">Click to enlarge ↗</span></button>
-  </div>
-</section>
-
-<section id="challenge">
-  <div class="wrap narrow">
-    <h2>The Challenge</h2>
-    <p>
-      Create scalable, engaging learning solutions for distributed teams while
-      maintaining consistency across international training programs, LMS delivery,
-      and enterprise workflows.
-    </p>
-  </div>
-</section>
-
-<section class="alt" id="role">
-  <div class="wrap two-column">
-    <div>
-      <h2>My Role</h2>
-      <ul>
-        <li>Senior Instructional Designer</li>
-        <li>Enterprise Learning Strategy</li>
-        <li>Articulate 360 & Adobe Captivate</li>
-        <li>Character Animator & Audio Production</li>
-        <li>Absorb LMS Administration</li>
-        <li>Jira & Confluence Collaboration</li>
-      </ul>
-    </div>
-
-    <div class="image-placeholder">Coming Soon</div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <h2>Instructional Design Process</h2>
-
-    <div class="process-grid">
-      <div>Analysis</div>
-      <div>Design</div>
-      <div>Development</div>
-      <div>QA</div>
-      <div>Deployment</div>
-      <div>Continuous Improvement</div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="deliverables">
-  <div class="wrap">
-    <h2>Representative Deliverables</h2>
-
-    <div class="gallery">
-      <div class="image-placeholder">Coming Soon</div>
-      <div class="image-placeholder">Coming Soon</div>
-      <div class="image-placeholder">Coming Soon</div>
-    </div>
-  </div>
-</section>
-
-<section id="results">
-  <div class="wrap narrow">
-    <h2>Results</h2>
-
-    <p>
-      This engagement highlights the integration of instructional design,
-      enterprise systems, multimedia production, and scalable learning
-      architecture to support global workforce development.
-    </p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <a class="back-link" href="../index.html#demo">&larr; Back to Portfolio</a>
-  </div>
-</footer>
-
-
-<script>
-const sections=[...document.querySelectorAll('section[id]')];
-const links=[...document.querySelectorAll('.case-nav nav a')];
-const obs=new IntersectionObserver(entries=>{
- entries.forEach(e=>{
- if(e.isIntersecting){
- links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')=='#'+e.target.id));
- }
- });
-},{threshold:.45});
-sections.forEach(s=>obs.observe(s));
-</script>
-
+<body class="streamlined-case">
+<header class="simple-case-nav"><a href="../index.html#demo">&larr; Back to Portfolio</a></header>
+<main class="simple-case-main">
+<p class="simple-eyebrow">CASE STUDY</p>
+<h1>Avant</h1>
+<h2>Global FinTech Training Development</h2>
+<p class="simple-description">I developed e-learning programs and multimedia instructional resources for Avant’s international training centers in Jamaica and the Philippines. Using Adobe Captivate, Adobe Character Animator, Pro Tools, and Audition, I created training media and supported delivery through Absorb LMS. I also coordinated project workflows using Jira and Confluence to maintain consistency across global rollouts.</p>
+<button type="button" class="simple-infographic case-diagram" data-case-preview aria-label="Enlarge Avant infographic">
+<img src="avant-workflow.png" alt="Avant project workflow infographic">
+<span class="simple-enlarge">Click to enlarge ↗</span>
+</button>
+</main>
+<footer class="simple-case-footer"><a href="../index.html#demo">&larr; Back to Portfolio</a></footer>
 <div class="case-lightbox" id="caseLightbox" role="dialog" aria-modal="true" aria-label="Avant Global Training Program enlarged infographic" aria-hidden="true"><button type="button" class="case-zoom">Zoom in</button><button type="button" class="case-close" aria-label="Close infographic">Close ✕</button><img src="avant-workflow.png" alt="Avant Global Training Program infographic enlarged"></div>
 <script>
 (function(){
