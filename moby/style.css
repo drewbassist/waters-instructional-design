@@ -32,3 +32,7 @@ footer{border-top:1px solid var(--line);padding:50px 0}
 .archive-lightbox-close{position:fixed;top:14px;right:22px;border:0;background:transparent;color:#fff;font-size:48px;line-height:1;cursor:pointer;padding:4px 10px}
 body.lightbox-open{overflow:hidden}
 @media(max-width:900px){.archive-preview{min-height:0}.archive-preview span{opacity:1;transform:none}.archive-lightbox{padding:54px 12px 20px}}
+
+/* Refined portfolio diagram presentation */
+.archive-preview{border:1px solid #d8e1ed;box-shadow:0 12px 34px rgba(16,38,66,.12);transition:box-shadow .2s ease,transform .2s ease}
+.archive-preview:hover{box-shadow:0 18px 44px rgba(16,38,66,.18);transform:translateY(-2px)}

@@ -277,3 +277,16 @@ text-align:center;
 background:#fff;
 }
 .metric strong{display:block;font-size:3rem;line-height:1;}
+
+/* Case study infographic preview and accessible zoomable lightbox */
+.case-diagram{display:block;width:100%;padding:0;border:1px solid #d8e1ed;border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;box-shadow:0 12px 34px rgba(16,38,66,.12);position:relative}
+.case-diagram img{display:block;width:100%;height:auto}
+.case-diagram .case-hint{position:absolute;bottom:12px;right:12px;background:rgba(13,30,54,.87);color:#fff;border-radius:20px;padding:7px 12px;font:600 12px system-ui,sans-serif}
+.case-diagram:focus-visible{outline:3px solid #2875dc;outline-offset:3px}
+.case-lightbox{position:fixed;inset:0;z-index:99999;background:rgba(6,13,25,.94);display:none;align-items:center;justify-content:center;padding:58px 16px 20px}
+.case-lightbox.is-open{display:flex}
+.case-lightbox img{display:block;max-width:96vw;max-height:85vh;width:auto;height:auto;object-fit:contain;background:white;box-shadow:0 12px 55px #0008;cursor:zoom-in;transform-origin:center;transition:transform .15s}
+.case-lightbox.is-zoomed img{transform:scale(1.65);cursor:zoom-out}
+.case-lightbox button{position:absolute;top:12px;border:1px solid #ffffff55;background:#17263a;color:#fff;padding:8px 13px;border-radius:8px;font:600 14px system-ui,sans-serif;cursor:pointer}
+.case-close{right:18px}.case-zoom{right:104px}
+@media(max-width:700px){.case-lightbox.is-zoomed img{transform:scale(2.3)}.case-diagram .case-hint{font-size:11px}}

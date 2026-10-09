@@ -59,6 +59,8 @@
   </div>
 </section>
 
+<section class="case-infographic-section"><div class="wrap"><h2>Learning System Overview</h2><button class="case-diagram" data-case-preview type="button" aria-label="Enlarge StudyLedgerOS Learning System infographic"><img src="studyledgeros-workflow.png" alt="StudyLedgerOS Learning System end-to-end workflow infographic"><span class="case-hint">Click to enlarge ↗</span></button></div></section>
+
 <section id="overview">
   <div class="wrap">
 
@@ -124,5 +126,24 @@
 
 </footer>
 
+<div class="case-lightbox" id="caseLightbox" role="dialog" aria-modal="true" aria-label="StudyLedgerOS Learning System enlarged infographic" aria-hidden="true"><button type="button" class="case-zoom">Zoom in</button><button type="button" class="case-close" aria-label="Close infographic">Close ✕</button><img src="studyledgeros-workflow.png" alt="StudyLedgerOS Learning System infographic enlarged"></div>
+<script>
+(function(){
+ const preview=document.querySelector('[data-case-preview]');
+ const overlay=document.getElementById('caseLightbox');
+ if(!preview||!overlay)return;
+ const close=overlay.querySelector('.case-close');
+ const zoom=overlay.querySelector('.case-zoom');
+ const photo=overlay.querySelector('img');
+ function setZoom(on){overlay.classList.toggle('is-zoomed',on);zoom.textContent=on?'Fit to screen':'Zoom in';}
+ function dismiss(){overlay.classList.remove('is-open');overlay.setAttribute('aria-hidden','true');setZoom(false);document.body.style.overflow='';preview.focus();}
+ preview.addEventListener('click',()=>{overlay.classList.add('is-open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();});
+ close.addEventListener('click',dismiss);
+ zoom.addEventListener('click',()=>setZoom(!overlay.classList.contains('is-zoomed')));
+ photo.addEventListener('click',()=>setZoom(!overlay.classList.contains('is-zoomed')));
+ overlay.addEventListener('click',e=>{if(e.target===overlay)dismiss();});
+ document.addEventListener('keydown',e=>{if(!overlay.classList.contains('is-open'))return;if(e.key==='Escape')dismiss();});
+})();
+</script>
 </body>
 </html>
