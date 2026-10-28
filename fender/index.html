@@ -45,5 +45,6 @@
  document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('is-open'))return;if(e.key==='Escape')shut();if(e.key==='Tab'){const controls=[zoom,close];if(e.shiftKey&&document.activeElement===zoom){e.preventDefault();close.focus();}else if(!e.shiftKey&&document.activeElement===close){e.preventDefault();zoom.focus();}}});
 })();
 </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
